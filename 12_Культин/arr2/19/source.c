@@ -16,7 +16,7 @@ int main() {
 	int** res = (int**)malloc(sizeof(int*) * n); // = { {1, 2, 3, 4},  {4,3, 4, 21} };
 	
 	for (i = 0; i < n; i++)
-		res[i] = (int*)malloc(sizeof(int) * n);
+		res[i] = (int*)malloc(sizeof(int) * 3);
 
 
 	for (int i = 0; i < n; i++) {
