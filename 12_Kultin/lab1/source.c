@@ -10,10 +10,10 @@
 //#define RAND_MIN = pow(10, n - 1)
 int main() {
 	srand(time(NULL));
-	setlocale(LC_ALL, "ru");
+	setlocale(LC_ALL, "RU");
 	clock_t start, end;
 	double time;
-	int res[1000], res1[1000], n, k, l, r,menu1, menu2, count;
+	int res[20000], res1[20000], n, k, l, r,menu1, menu2, count;
 	menu1 = menuIn();
 	while (menu1 != -2) {
 		if (menu1 == 1)
@@ -227,7 +227,7 @@ int menuIn1(int arr[]) {
 	n = 0;
 	val = 0;
 	printf("Введите числа массива, последним числом указав -1 или выйдите из программы, введя -2 или выйдите из заполнения, введя -3:\n");
-	for (int i = 0; val != -1 && n < 1001; i++) {
+	for (int i = 0; val != -1 && n < 20001; i++) {
 		scanf_s("%d", &val);
 		if (val == -3)
 			return menuIn();
@@ -259,8 +259,8 @@ int menuIn2(int arr[]) {
 	}
 	printf("Введите количество чисел в массиве:\n");
 	scanf_s("%d", &r);
-	while (r < 1 && r <= 1000) {
-		printf("Длинна массива должна варироваться от 1 од 1000\n");
+	while (r < 1 && r <= 20000) {
+		printf("Длинна массива должна варироваться от 1 од 20000\n");
 		scanf_s("%d", &r);
 	}
 	for (int i = 0; i <= r; i++)
@@ -348,7 +348,7 @@ int sortIns(int arr[], int n, int *count) {
 
 int alam(int arr[], int l, int m, int r, int *count) {
 	int i, j, k, n1, n2;
-	int larr[1000], rarr[1000];
+	int larr[20000], rarr[20000];
 
 	n1 = m - l + 1;
 	n2 = r - m;
